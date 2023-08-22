@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>Astro</title>
+    <title>Onrir</title>
     <script>
       import "boxicons";
 
@@ -19,6 +19,14 @@
           rem.remove();
         }
       });
+
+      let sc;
+      document.getElementById("secret").addEventListener("click", el => {
+        if(!sc)
+          el.target.innerHTML = "The difference between the sun and the moon is <span class='text-red-500'>night and day</span>.";
+          sc = true;
+      });
+
     </script>
   </head>
   <body>
@@ -448,10 +456,11 @@
         </a>
 
         <a
+        id="secret"
           class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-800 dark:border-gray-800"
-          href="#https://github.com/onrirr/onrir"
+          href="#https://github.com/onrirr/portfolio"
         >
-          <div class="p-4 md:p-5">
+          <div class="p-4 md:p-5" >
             <div class="flex justify-between items-center">
               <div>
                 <h3

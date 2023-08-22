@@ -116,3 +116,7 @@ html {
     opacity: 0;
   }
 }
+
+.animate-code {
+  animation: blink 1s infinite;
+}
