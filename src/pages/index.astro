@@ -1,15 +1,495 @@
 ---
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Hello</h1>
-	</body>
+<html lang="en" class="dark bg-gray-900 text-gray-100">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/text.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Astro</title>
+    <script>
+      import "boxicons";
+
+      document.addEventListener("scroll", () => {
+        const rem = document.getElementById("rem");
+        if (rem) {
+          rem.remove();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="flex flex-col items-center justify-center h-full">
+        <h1 class="font-bold text-center text-white">
+          <span class="onrir text-transparent bg-clip-text"> ONRIR</span>
+        </h1>
+
+        <p class="para mt-6 text-gray-500 dark:text-gray-300 text-center mb-12">
+          Self taughthobby web developer, student and content creator from
+          Türkiye.
+        </p>
+        <img
+          style="height: 20%;"
+          src="https://lanyard.cnrad.dev/api/1002526468359864440?bg=00"
+        />
+      </div>
+    </main>
+
+    <nav class="bg-white dark:bg-gray-900">
+      <div
+        class="container flex w-full items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300"
+      >
+        <a
+          href="#"
+          class="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1 sm:mx-1"
+          >Home</a
+        >
+        <!-- verticle divider -->
+        <div class="h-6 border-l-2 border-gray-300 dark:border-gray-700 m-2">
+        </div>
+
+        <a
+          href="https://medium.com/@onrir"
+          class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1 sm:mx-1"
+        >
+          <box-icon style="width:20px" type="logo" name="medium" color="#ffffff"
+          ></box-icon>
+        </a>
+        <a
+          href="https://www.reddit.com/user/onrirr"
+          class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1 sm:mx-1"
+        >
+          <box-icon style="width:20px" type="logo" name="reddit" color="#ffffff"
+          ></box-icon>
+        </a>
+        <a
+          href="https://github.com/onrirr"
+          class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1 sm:mx-1"
+        >
+          <box-icon style="width:20px" type="logo" name="github" color="#ffffff"
+          ></box-icon>
+        </a>
+        <a
+          href="https://www.youtube.com/@onrir"
+          class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1 sm:mx-1"
+        >
+          <box-icon
+            style="width:20px"
+            type="logo"
+            name="youtube"
+            color="#ffffff"></box-icon>
+        </a>
+        <a
+          href="https://twitter.com/onrirr"
+          class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1 sm:mx-1"
+        >
+          <box-icon
+            style="width:20px"
+            type="logo"
+            name="twitter"
+            color="#ffffff"></box-icon>
+        </a>
+      </div>
+    </nav>
+    <div class="whoAmI mt-10 text-center items-center">
+      <h1 class="font-bold text-center text-white">
+        <span class="onrir xs text-transparent bg-clip-text"> Who am I?</span>
+      </h1>
+      <p
+        class="para mt-6 text-gray-500 dark:text-gray-300 text-center mb-5 align-baseline"
+      >
+        Heya, I'm Onrir, a web developer, student and content creator from
+        Türkiye.
+        <br /> I primarily write code in my free time and I enjoy working with
+        <box-icon
+          style="vertical-align: bottom;"
+          size="sm"
+          type="logo"
+          name="javascript"
+          color="#ffffff"></box-icon>,<box-icon
+          style="vertical-align: bottom;"
+          size="sm"
+          type="logo"
+          name="typescript"
+          color="#ffffff"></box-icon>
+        and
+        <box-icon
+          style="vertical-align: bottom;"
+          size="sm"
+          type="logo"
+          name="go-lang"
+          color="#ffffff"></box-icon>.
+      </p>
+      <!-- Icon Blocks -->
+      <div
+        class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto text-left"
+      >
+        <div
+          class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-3 xl:gap-6"
+        >
+          <a
+            class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075]"
+            href="#"
+          >
+            <box-icon
+              class="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 mr-6 dark:text-gray-200"
+              style="vertical-align: bottom;"
+              size="cssSize"
+              type="logo"
+              name="chrome"
+              color="#ffffff"></box-icon>
+            <div>
+              <div>
+                <h3 class="block font-bold text-gray-800 dark:text-white">
+                  Web Developer
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                  I am a web devleoper with experience both on the front and the
+                  back-end. I primarily work with Vue and Svelte.
+                </p>
+              </div>
+            </div>
+          </a>
+          <!-- End Card -->
+          <a
+            class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075]"
+            href="#"
+          >
+            <box-icon
+              class="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 mr-6 dark:text-gray-200"
+              style="vertical-align: bottom;"
+              size="cssSize"
+              type="logo"
+              name="discord"
+              color="#ffffff"></box-icon>
+            <div>
+              <div>
+                <h3 class="block font-bold text-gray-800 dark:text-white">
+                  Discord Bot Developer
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                  I have experience developing various Discord bots with
+                  Node.js, Deno and Go. My go-to library is discord.js.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075]"
+            href="#"
+          >
+            <box-icon
+              class="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 mr-6 dark:text-gray-200"
+              style="vertical-align: bottom;"
+              size="cssSize"
+              type="logo"
+              name="youtube"
+              color="#ffffff"></box-icon>
+            <div>
+              <div>
+                <h3 class="block font-bold text-gray-800 dark:text-white">
+                  Youtuber
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                  I occasionally make Turkish videos about programming and
+                  programming languages insipired by Fireship.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <br /><span id="x"></span>
+    </div>
+
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div
+        class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
+      >
+        <a
+          class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-800 dark:border-gray-800"
+          href="https://onrirr.github.io/yDB/#/"
+        >
+          <div class="p-4 md:p-5">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3
+                  class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200"
+                >
+                  yDB
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Basic local prototyping Database based on Json/Yaml/Toml, for
+                  Node.js
+                </p>
+              </div>
+              <div class="pl-3">
+                <svg
+                  class="w-3.5 h-3.5 text-gray-500"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-800 dark:border-gray-800"
+          href="https://github.com/onrirr/LevelMaster"
+        >
+          <div class="p-4 md:p-5">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3
+                  class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200"
+                >
+                  Level Master
+                </h3>
+                <p class="text-sm text-gray-500">
+                  a Discord bot for tracking levels and ranks written in Node.js
+                  with Discord.js
+                </p>
+              </div>
+              <div class="pl-3">
+                <svg
+                  class="w-3.5 h-3.5 text-gray-500"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-800 dark:border-gray-800"
+          href="https://github.com/onrirr/feather-optimizer"
+        >
+          <div class="p-4 md:p-5">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3
+                  class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200"
+                >
+                  Feather Optimizer
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Tool for optimizing Windows 10 & disabling unnecessary
+                  services and bloatware written in NW.js
+                </p>
+              </div>
+              <div class="pl-3">
+                <svg
+                  class="w-3.5 h-3.5 text-gray-500"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-800 dark:border-gray-800"
+          href="https://github.com/onrirr/VolantCSS"
+        >
+          <div class="p-4 md:p-5">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3
+                  class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200"
+                >
+                  Kyoshin
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Lightweight Tailwind implementation that processes the classes
+                  in runtime.
+                </p>
+              </div>
+              <div class="pl-3">
+                <svg
+                  class="w-3.5 h-3.5 text-gray-500"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-800 dark:border-gray-800"
+          href="https://github.com/onrirr/lokum"
+        >
+          <div class="p-4 md:p-5">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3
+                  class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200"
+                >
+                  Lokum
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Scripting language written in Go to empower the use of Turkish
+                  in programming.
+                </p>
+              </div>
+              <div class="pl-3">
+                <svg
+                  class="w-3.5 h-3.5 text-gray-500"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-800 dark:border-gray-800"
+          href="https://github.com/onrirr/c3-web"
+        >
+          <div class="p-4 md:p-5">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3
+                  class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200"
+                >
+                  C3 Web
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Website concept for the C3 programming language written in
+                  Vue.
+                </p>
+              </div>
+              <div class="pl-3">
+                <svg
+                  class="w-3.5 h-3.5 text-gray-500"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-800 dark:border-gray-800"
+          href="#https://github.com/onrirr/onrir"
+        >
+          <div class="p-4 md:p-5">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3
+                  class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200"
+                >
+                  Onrir.dev
+                </h3>
+                <p class="text-sm text-gray-500">
+                  The very website you are visiting. Hope you like it :)
+                </p>
+              </div>
+              <div class="pl-3">
+                <svg
+                  class="w-3.5 h-3.5 text-gray-500"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="rem" class="scroll-down"></div>
+    <footer
+      class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto"
+    >
+      <!-- Grid -->
+      <div class="text-center">
+        <div>
+          <a
+            class="flex-none text-xl font-semibold text-black dark:text-white"
+            href="#"
+            aria-label="Brand">Onrir.dev</a
+          >
+        </div>
+        <!-- End Col -->
+
+        <div class="mt-3">
+          <p class="text-gray-500">
+            Open source portfolio website by <a
+              class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
+              href="https://github.com/onrirr">Onrir</a
+            >.
+          </p>
+          <p class="text-gray-500">© Onrir 2023. All rights reserved.</p>
+        </div>
+      </div>
+      <!-- End Grid -->
+    </footer>
+  </body>
 </html>

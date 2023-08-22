@@ -5,7 +5,16 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true
+    "**/Thumbs.db": true,
+    "node_modules": true,
+    ".vscode": true,
+    ".github/workflows": true,
+    "package-lock.json": true
   },
-  "hide-files.files": []
+  "hide-files.files": [
+    "node_modules",
+    ".vscode",
+    ".github/workflows",
+    "package-lock.json"
+  ]
 }
