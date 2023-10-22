@@ -6,15 +6,23 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "node_modules": true,
     ".vscode": true,
     ".github/workflows": true,
-    "package-lock.json": true
+    "package-lock.json": true,
+    "tsconfig.json": true,
+    "CNAME": true,
+    "astro.config.mjs": true,
+    ".github": true,
+    "node_modules": true
   },
   "hide-files.files": [
-    "node_modules",
     ".vscode",
     ".github/workflows",
-    "package-lock.json"
+    "package-lock.json",
+    "tsconfig.json",
+    "CNAME",
+    "astro.config.mjs",
+    ".github",
+    "node_modules"
   ]
 }
