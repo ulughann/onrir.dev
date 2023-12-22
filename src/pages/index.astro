@@ -1,8 +1,6 @@
 ---
-import Hero from '../components/hero.astro';
-import Details from '../components/details.astro';
-import Projects from '../components/projects.astro';
-import Navbar from '../components/navbar.astro';
+import Hero from "../components/Hero.astro";
+
 ---
 
 <head>
@@ -24,14 +22,11 @@ import Navbar from '../components/navbar.astro';
     import "boxicons";
   </script>
 </head>
-<body class="background-background">
-  <div id="blob"></div>
-  <div id="blur"></div>
-  <main>
-    <Navbar/>
-    <Hero/>
-    <Details/>
-    <Projects/> 
 
+<body>
+  <div class="main"></div>
+  <main>
+    <Hero />
   </main>
+
 </body>
