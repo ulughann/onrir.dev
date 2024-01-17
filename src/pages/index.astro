@@ -1,6 +1,5 @@
 ---
 import Hero from "../components/hero.astro";
-
 ---
 
 <head>
@@ -10,11 +9,14 @@ import Hero from "../components/hero.astro";
   <meta name="viewport" content="width=device-width" />
   <meta name="description" content="Youtuber and Web Developer from Türkiye" />
   <meta name="author" content="Onrir" />
-  <meta name="keywords" content="Onrir"/>
+  <meta name="keywords" content="Onrir" />
   <meta name="theme-color" content="#a7a1fa" />
 
   <meta property="og:title" content="Onrir" />
-  <meta property="og:description" content="Youtuber and Web Developer from Türkiye" />
+  <meta
+    property="og:description"
+    content="Youtuber and Web Developer from Türkiye"
+  />
   <meta property="og:image" content="/logo.png" />
 
   <title>Onrir</title>
@@ -23,10 +25,8 @@ import Hero from "../components/hero.astro";
   </script>
 </head>
 
-<body>
-  <div class="main"></div>
+<body class="bg-background">
   <main>
     <Hero />
   </main>
-
 </body>
