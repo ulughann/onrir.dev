@@ -1,12 +1,116 @@
 :root {
-  --primary: #9137A8;
-  --secondary: #CB384A;
-  --accent: #C95C85;
-  --background: #1E1C45;
+  --primary: #9137a8;
+  --secondary: #cb384a;
+  --background: #040713;
   --background-gray: #323239;
-  --text: #D1CFEC;
+  --text: #d1cfec;
+
+  --waves-height: 50px;
+  --waves-width: 0px;
 }
 
-* {
-  color: var(--text);
+.hero {
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpzdmdqcz0iaHR0cDovL3N2Z2pzLmRldi9zdmdqcyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNzAwIDcwMCIgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIG9wYWNpdHk9IjAuMiI+PGRlZnM+PGZpbHRlciBpZD0ibm5ub2lzZS1maWx0ZXIiIHg9Ii0yMCUiIHk9Ii0yMCUiIHdpZHRoPSIxNDAlIiBoZWlnaHQ9IjE0MCUiIGZpbHRlclVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgcHJpbWl0aXZlVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9ImxpbmVhclJHQiI+Cgk8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC4yIiBudW1PY3RhdmVzPSI0IiBzZWVkPSIxNSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByZXN1bHQ9InR1cmJ1bGVuY2UiLz4KCTxmZVNwZWN1bGFyTGlnaHRpbmcgc3VyZmFjZVNjYWxlPSI2IiBzcGVjdWxhckNvbnN0YW50PSIxIiBzcGVjdWxhckV4cG9uZW50PSIyMCIgbGlnaHRpbmctY29sb3I9IiNhYmFiYWIiIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgaW49InR1cmJ1bGVuY2UiIHJlc3VsdD0ic3BlY3VsYXJMaWdodGluZyI+CiAgICAJCTxmZURpc3RhbnRMaWdodCBhemltdXRoPSIzIiBlbGV2YXRpb249Ijg5Ii8+CiAgCTwvZmVTcGVjdWxhckxpZ2h0aW5nPgogIDxmZUNvbG9yTWF0cml4IHR5cGU9InNhdHVyYXRlIiB2YWx1ZXM9IjAiIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgaW49InNwZWN1bGFyTGlnaHRpbmciIHJlc3VsdD0iY29sb3JtYXRyaXgiLz4KPC9maWx0ZXI+PC9kZWZzPjxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iNzAwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPjxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iNzAwIiBmaWxsPSIjYWJhYmFiIiBmaWx0ZXI9InVybCgjbm5ub2lzZS1maWx0ZXIpIi8+PC9zdmc+),
+    linear-gradient(-20deg, var(--primary), var(--secondary)),
+    linear-gradient(45deg, var(--accent), var(--primary) 80%);
+}
+
+nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.card {
+  font-size: 4dvh;
+}
+
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  position: relative;
+  margin: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  width: 300px;
+}
+
+.card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 4;
+}
+
+.card-image > img {
+  width: var(--logo-size);
+}
+
+.card-gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: radial-gradient(
+    rgb(85, 108, 240) 40%,
+    rgb(97, 128, 233) 50%,
+    rgb(56, 136, 255),
+    rgb(140, 42, 252)
+  );
+  mix-blend-mode: darken;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.card-letters {
+  --x: 0px;
+  --y: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  word-wrap: break-word;
+  opacity: 0;
+  transition: opacity 400ms;
+  -webkit-mask-image: radial-gradient(
+    calc(480px * 0.8) circle at var(--x) var(--y),
+    rgb(255 255 255) 20%,
+    rgb(255 255 255 / 25%),
+    transparent
+  );
+  scale: 1.03;
+}
+
+.card:hover .card-letters {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --card-size: 480px;
+  }
+
+  .card {
+    border-radius: 1rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  background-color: transparent;
+}::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-three);
+  background-clip: content-box;
 }

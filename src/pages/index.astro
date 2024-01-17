@@ -1,5 +1,9 @@
 ---
 import Hero from "../components/hero.astro";
+import Description from "../components/description.astro";
+import Navbar from "../components/navbar.astro";
+import Projects from "../components/projects.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <head>
@@ -23,10 +27,19 @@ import Hero from "../components/hero.astro";
   <script>
     import "boxicons";
   </script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 
-<body class="bg-background">
+<body class="dark bg-background">
   <main>
     <Hero />
+    <br><br>
+    <Navbar />
+    <Description />
+    <Projects />
+    <Footer />
   </main>
 </body>
